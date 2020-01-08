@@ -17,10 +17,7 @@ public class SampleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample);
-
         listnew = new ArrayList<>();
-
-
         for(int i=0;i<200;i++)
         {
             if(i%2==0)
@@ -31,8 +28,9 @@ public class SampleActivity extends AppCompatActivity {
                 listnew.add(new General("Image odd",R.drawable.cart));
         }
 
+        /*setting the adapter*/
+
         RecyclerView newrec=(RecyclerView) findViewById(R.id.recycleView);
-        //newrec.setNestedScrollingEnabled(true);
         GeneralAdapter newadap= new GeneralAdapter(this,listnew);
         newrec.setLayoutManager(new StaggeredGridLayoutManager(2,1));
         newrec.setAdapter(newadap);

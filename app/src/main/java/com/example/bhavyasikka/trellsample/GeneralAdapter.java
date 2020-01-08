@@ -31,6 +31,8 @@ public class GeneralAdapter extends RecyclerView.Adapter<GeneralHolder> {
 
         ViewGroup.LayoutParams params= holder.mview.getLayoutParams();
 
+        /* setting variable height according to position */
+
         if(position%2!=0)
         {
             params.height=300;
@@ -47,11 +49,7 @@ public class GeneralAdapter extends RecyclerView.Adapter<GeneralHolder> {
 
     @Override
     public GeneralHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view ;//=parent ;
-//        LinearLayout.LayoutParams lp=
-//                new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 500);
-//        view.setLayoutParams(lp);
-
+        View view ;
         LayoutInflater mInflater = LayoutInflater.from(mContext);
         view = mInflater.inflate(R.layout.display_xml, parent, false);
         return new GeneralHolder(view);
