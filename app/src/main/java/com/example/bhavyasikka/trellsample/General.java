@@ -9,6 +9,9 @@ public class General {
 
     }
 
+    public General(String text){
+        mtext=text;
+    }
     public General(String text,int thumbnail)
     {
         mthumbnail=thumbnail;

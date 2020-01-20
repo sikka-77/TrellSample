@@ -33,17 +33,17 @@ public class GeneralAdapter extends RecyclerView.Adapter<GeneralHolder> {
 
         /* setting variable height according to position */
 
-        if(position%2!=0)
-        {
-            params.height=300;
-        }
-        else
-        {
-            params.height=600;
-        }
+//        if(position%2!=0)
+//        {
+//            params.height=300;
+//        }
+//        else
+//        {
+//            params.height=600;
+//        }
 
         holder.mview.setLayoutParams(params);
-        holder.mthumbnail.setImageResource(mData.get(position).getThumbnail());
+        //holder.mthumbnail.setImageResource(mData.get(position).getThumbnail());
         holder.textView.setText(mData.get(position).getText());
     }
 
@@ -70,7 +70,7 @@ public class GeneralAdapter extends RecyclerView.Adapter<GeneralHolder> {
         public GeneralHolder(View itemView) {
             super(itemView);
             mview=itemView;
-            mthumbnail = (ImageView) itemView.findViewById(R.id.img1);
+           // mthumbnail = (ImageView) itemView.findViewById(R.id.img1);
             textView = (TextView) itemView.findViewById(R.id.sample_text);
         }
 
